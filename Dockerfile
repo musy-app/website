@@ -1,42 +1,28 @@
-# Install dependencies only when needed
-FROM node:14-alpine AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+FROM node:11.13.0-alpine
 
-# Rebuild the source code only when needed
-FROM node:14-alpine AS builder
-WORKDIR /app
-COPY . .
-COPY --from=deps /app/node_modules ./node_modules
-RUN yarn build
+# create destination directory
+RUN mkdir -p /usr/src/nuxt-app
+WORKDIR /usr/src/nuxt-app
 
-# Production image, copy all the files and run next
-FROM node:14-alpine AS runner
-WORKDIR /app
+# update and install dependency
+RUN apk update && apk upgrade
+RUN apk add git
 
-ENV NODE_ENV production
+# copy the app, note .dockerignore
+COPY . /usr/src/nuxt-app/
+RUN npm install
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S musy-website -u 1001
+# build necessary, even if no static files are needed,
+# since it builds the server as well
+RUN npm run build
 
-# You only need to copy next.config.js if you are NOT using the default configuration
-# COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=musy-website:nodejs /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-COPY ./next.config.js /app/next.config.js
+# expose 5000 on container
+EXPOSE 5000
 
-USER musy-website
+# set app serving to permissive / assigned
+ENV NUXT_HOST=0.0.0.0
+# set app port
+ENV NUXT_PORT=5000
 
-EXPOSE 3000
-
-# Next.js collects completely anonymous telemetry data about general usage.
-# Learn more here: https://nextjs.org/telemetry
-# Uncomment the following line in case you want to disable telemetry.
-# ENV NEXT_TELEMETRY_DISABLED 1
-
-CMD ["yarn", "start"]
+# start the app
+CMD [ "npm", "start" ]

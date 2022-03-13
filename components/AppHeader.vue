@@ -1,7 +1,9 @@
 <template>
-  <div class="header">
-    <h1 class="title">musy</h1>
-    <div class="nav"></div>
+  <div id="header">
+    <div class="nav-bar">
+      <h1 class="title">musy</h1>
+      <ButtonNavBar />
+    </div>
   </div>
 </template>
 
@@ -10,18 +12,21 @@ export default {};
 </script>
 
 <style lang="scss">
-.header {
-  color: $light;
-  padding: $pad-m;
+#header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  padding: $pad-s;
+  .nav-bar {
+    color: $light;
+    display: flex;
+    justify-content: space-between;
+    background-color: $lightblue;
 
-  .title {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 2px;
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
   }
 }
 </style>

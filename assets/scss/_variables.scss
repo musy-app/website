@@ -4,24 +4,26 @@
 
 $dark: #000000;
 $light: #ffffff;
-$lightblue: #2a62f5;
+$darkblue: #2a62f5;
+$lightblue: #3f71f6;
 
 /**
   * Padding
   */
 
-$pad-xl: 200px;
-$pad-l: 100px;
-$pad-m: 50px;
-$pad-s: 25px;
-$pad-xs: 15px;
+$pad-xl: 150px;
+$pad-l: 80px;
+$pad-m: 40px;
+$pad-s: 20px;
+$pad-xs: 12px;
 $pad-xxs: 7px;
 
 /**
   * Other
   */
 
-$rad: 5px;
+$rad-s: 5px;
+$rad-m: 10px;
 $trans: all 0.3s;
 $shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 $width-small: 40px;

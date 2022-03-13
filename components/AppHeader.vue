@@ -19,7 +19,7 @@ export default {};
     color: $light;
     display: flex;
     justify-content: space-between;
-    background-color: $lightblue;
+    background-color: $darkblue;
 
     .title {
       text-transform: uppercase;

@@ -15,6 +15,10 @@ export default {};
 #header {
   width: 100%;
   padding: $pad-s;
+
+  @include min-m {
+    padding: $pad-l;
+  }
   .nav-bar {
     color: $light;
     display: flex;

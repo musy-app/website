@@ -10,12 +10,16 @@
     </div>
     <div class="homepage-content">
       <h2>Challenge tes amis<br />en musique</h2>
-      <p class="desc">
+      <p class="homepage-content__desc">
         Expose tes talents musicaux aux autres et montre qui est le meilleur en
         Blindtest...
       </p>
       <ButtonRegular text="Créer une partie" />
       <ButtonRegular text="J’ai déjà un code" theme="blue" />
+      <p class="homepage-content__publicGame">
+        <Icon icon="DoubleArrowLeftRight" />
+        Rejoindre une partie publique
+      </p>
     </div>
   </div>
 </template>
@@ -38,10 +42,10 @@ export default {
     width: 100%;
     display: flex;
     justify-content: center;
-    max-height: 350px;
+    max-height: 320px;
     img {
       max-width: 100%;
-      max-height: 350px;
+      max-height: 320px;
     }
   }
 
@@ -57,13 +61,24 @@ export default {
       letter-spacing: 1.3px;
     }
 
-    .desc {
+    &__desc {
       margin: $pad-s 0;
       color: $light;
       font-size: 16px;
       text-align: center;
       font-weight: 300;
       width: 80%;
+    }
+
+    &__publicGame {
+      display: flex;
+      align-items: center;
+      color: $light;
+      padding-top: $pad-s;
+
+      .single-icon {
+        margin-right: $pad-xxs;
+      }
     }
   }
 }

@@ -50,4 +50,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  pwa: {
+    meta: {
+      mobileAppIOS: true,
+      appleStatusBarStyle: "black-translucent",
+      name: "MUSY - The blind test webapp",
+    },
+  },
 };

@@ -20,8 +20,6 @@
   },
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.3.5",
-    "fibers": "^5.0.1",
     "sass": "^1.49.9",
     "sass-loader": "10"
   }

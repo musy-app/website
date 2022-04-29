@@ -10,7 +10,10 @@ export default {};
 </script>
 
 <style lang="scss">
-body {
-  background-color: $darkblue;
+.app {
+  width: 100%;
+  max-width: $width-app;
+  height: 100vh;
+  background-color: $lightblue;
 }
 </style>

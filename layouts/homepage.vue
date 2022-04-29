@@ -12,6 +12,7 @@ export default {};
 <style lang="scss">
 .app {
   width: 100%;
+  max-width: $width-app;
   height: 100vh;
   background-color: $lightblue;
 }

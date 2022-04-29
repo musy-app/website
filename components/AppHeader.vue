@@ -1,8 +1,9 @@
 <template>
   <div id="header">
     <div class="navbar">
-      <h1 class="title">musy</h1>
+      <h1 class="title">{{ $t("AppHeader.AppTitle") }}</h1>
       <NavBar />
+      <ButtonRegular />
     </div>
   </div>
 </template>
@@ -28,8 +29,17 @@ export default {};
     .title {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 50px;
       letter-spacing: 2px;
+      width: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .button-regular {
+      width: 15%;
     }
   }
 }

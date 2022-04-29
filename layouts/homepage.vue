@@ -1,7 +1,9 @@
 <template>
   <div class="app">
-    <AppHeader />
-    <Nuxt />
+    <div class="app__content">
+      <AppHeader />
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -12,8 +14,13 @@ export default {};
 <style lang="scss">
 .app {
   width: 100%;
-  max-width: $width-app;
   height: 100vh;
   background-color: $lightblue;
+
+  &__content {
+    max-width: $width-app;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div id="header">
-    <div class="nav-bar">
+    <div class="navbar">
       <h1 class="title">musy</h1>
-      <ButtonNavBar />
+      <NavBar />
     </div>
   </div>
 </template>
@@ -19,11 +19,11 @@ export default {};
   @include min-m {
     padding: $pad-l;
   }
-  .nav-bar {
+  .navbar {
     color: $light;
     display: flex;
     justify-content: space-between;
-    background-color: $darkblue;
+    background-color: $lightblue;
 
     .title {
       text-transform: uppercase;

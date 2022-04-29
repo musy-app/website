@@ -36,6 +36,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/i18n",
+    "vue-scrollto/nuxt",
   ],
 
   styleResources: {
@@ -51,11 +53,24 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  //@nuxt/pwa module options
   pwa: {
     meta: {
       mobileAppIOS: true,
       appleStatusBarStyle: "black-translucent",
       name: "MUSY - The blind test webapp",
     },
+  },
+
+  //@nuxt/i18n module options
+  i18n: {
+    locales: [
+      { code: "en", iso: "en-US", file: "en-US.js", dir: "ltr" },
+      { code: "fr", iso: "fr-FR", file: "fr-FR.js" },
+    ],
+    defaultLocale: "fr",
+    // baseUrl: 'https://talodev.fr',
+    lazy: true,
+    langDir: "lang/",
   },
 };

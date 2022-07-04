@@ -11,9 +11,8 @@ export default {
 </script>
 
 <style lang="scss">
-.homepage {
-  &__title {
-    color: $light;
-  }
+h1 {
+  text-align: center;
+  color: $light;
 }
 </style>

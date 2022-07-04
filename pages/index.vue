@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <h1></h1>
+    <h1>This app is currently in development</h1>
   </div>
 </template>
 

@@ -1,9 +1,8 @@
 <template>
   <div id="header">
     <div class="navbar">
-      <h1 class="title">{{ $t("AppHeader.AppTitle") }}</h1>
+      <h1 class="title">musy</h1>
       <NavBar />
-      <ButtonRegular />
     </div>
   </div>
 </template>

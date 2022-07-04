@@ -36,6 +36,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/i18n",
   ],
 
   styleResources: {
@@ -50,4 +51,28 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        name: "English",
+        iso: "en-US",
+        file: "/lang/en-US.js",
+      },
+      {
+        code: "es",
+        name: "Español",
+        iso: "es-ES",
+        file: "/lang/es-ES.js",
+      },
+      {
+        code: "fr",
+        name: "Français",
+        iso: "fr-FR",
+        file: "/lang/fr-FR.js",
+      },
+    ],
+    defaultLocale: "en",
+  },
 };

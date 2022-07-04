@@ -11,5 +11,6 @@ export default {
 <style lang="scss">
 h1 {
   text-align: center;
+  color: $light;
 }
 </style>

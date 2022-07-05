@@ -22,12 +22,11 @@ export default {
 <style lang="scss" scoped>
 .button-regular {
   margin: $pad-xs;
-  padding: $pad-s $pad-m;
+  padding: $pad-xs $pad-s;
   border-radius: $rad-m;
   border: none;
   cursor: pointer;
   font-weight: 700;
-  min-width: 215px;
 
   &:focus,
   &:active {

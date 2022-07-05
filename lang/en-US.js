@@ -1,4 +1,5 @@
 export default {
+  devMode: "This app is currently in development",
   //AppHeader
   AppHeader: {
     AppTitle: "Musy",
@@ -9,8 +10,9 @@ export default {
         1: "Play",
         2: "Public games",
         3: "Tutorial",
-        4: "Contact",
       },
     },
+
+    btnAuth: "Sign in",
   },
 };

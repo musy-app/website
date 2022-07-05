@@ -6,4 +6,8 @@ export default {
   OPEN_NAVBAR: (state) => {
     state.state = true;
   },
+
+  TOGGLE_NAVBAR: (state) => {
+    state.state = !state.state;
+  },
 };

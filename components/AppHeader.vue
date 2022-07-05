@@ -1,8 +1,12 @@
 <template>
   <div id="header">
     <div class="navbar">
-      <h1 class="title">musy</h1>
-      <NavBar />
+      <h1 class="title">{{ $t("AppHeader.AppTitle") }}</h1>
+      <NavBarMobile />
+      <NavBarDesktop />
+      <div class="btn--container">
+        <ButtonRegular :text="$t('AppHeader.btnAuth')" />
+      </div>
     </div>
   </div>
 </template>
@@ -15,6 +19,8 @@ export default {};
 #header {
   width: 100%;
   padding: $pad-s;
+  padding-top: calc($pad-s + env(safe-area-inset-top));
+  max-height: 350px;
 
   @include min-m {
     padding: $pad-l;
@@ -23,22 +29,27 @@ export default {};
     color: $light;
     display: flex;
     justify-content: space-between;
-    background-color: $lightblue;
+    align-items: center;
 
     .title {
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 50px;
+      font-size: 32px;
       letter-spacing: 2px;
-      width: 15%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      @include min-m {
+        width: 33%;
+      }
     }
 
-    .button-regular {
-      width: 15%;
+    .btn--container {
+      width: 33%;
+      @include max-m {
+        display: none;
+      }
     }
   }
 }

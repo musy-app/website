@@ -6,4 +6,8 @@ export default {
   openNavbar: ({ commit }) => {
     commit("OPEN_NAVBAR", true);
   },
+
+  toggleNavbar: ({ commit }) => {
+    commit("TOGGLE_NAVBAR");
+  },
 };

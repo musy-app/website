@@ -16,4 +16,14 @@ export default {
 
     btnAuth: "Se connecter",
   },
+
+  // INDEX
+  index: {
+    title: "Challenge tes amis en musique",
+    desc: "Expose tes talents musicaux aux autres et montre qui est le meilleur en Blindtest...",
+    button: {
+      createGame: "Créer une partie",
+      alreadyHaveGame: "J'ai déjà un code",
+    },
+  },
 };

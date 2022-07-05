@@ -23,7 +23,7 @@ export default {};
   max-height: 350px;
 
   @include min-m {
-    padding: $pad-l;
+    padding: $pad-l $pad-s;
   }
   .navbar {
     color: $light;
@@ -37,9 +37,9 @@ export default {};
       font-size: 32px;
       letter-spacing: 2px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      text-align: center;
+      text-align: left;
       @include min-m {
         width: 33%;
       }
@@ -47,6 +47,8 @@ export default {};
 
     .btn--container {
       width: 33%;
+      display: flex;
+      justify-content: flex-end;
       @include max-m {
         display: none;
       }

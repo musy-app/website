@@ -21,7 +21,6 @@ export default {
 
 <style lang="scss" scoped>
 .button-regular {
-  margin: $pad-xs;
   padding: $pad-xs $pad-s;
   border-radius: $rad-m;
   border: none;
@@ -39,8 +38,13 @@ export default {
     color: $darkblue;
   }
 
-  &--blue {
+  &--lightblue {
     background-color: $lightblue;
+    color: $light;
+  }
+
+  &--darkblue {
+    background-color: $darkblue;
     color: $light;
   }
 }

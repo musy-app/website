@@ -15,4 +15,14 @@ export default {
 
     btnAuth: "Sign in",
   },
+
+  // INDEX
+  index: {
+    title: "Challenge your friends in music",
+    desc: "Expose your skills in music to the other and show who is the best in Blindtest...",
+    button: {
+      createGame: "Create a game",
+      alreadyHaveGame: "I already have a code",
+    },
+  },
 };
